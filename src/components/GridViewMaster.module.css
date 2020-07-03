@@ -1,0 +1,32 @@
+.userTable{
+    border: 1px solid #444;
+    margin: auto;
+    width:90vw;
+    max-width: 90vw;
+    min-width: 90vw;
+  }
+  
+  .userThead{
+    background-color: #66F
+  }
+  
+  .userTable>tbody>tr:nth-of-type(odd){
+    background: #CCF
+  }
+  
+  .userTable>tbody>tr:nth-of-type(even){
+    background: #99F
+  }
+  
+  .userTable>thead>tr>th{
+    font-weight: 700;
+    padding: 0.5rem
+  }
+  .userTable>tbody>tr>td{
+    font-weight: 400;
+    padding: 0.5rem
+  }
+  
+  .userTable>thead>th:hover{
+    cursor: pointer;
+  }

@@ -1,0 +1,14 @@
+.edituserTable>tr>td{
+    padding: 0.5vw
+  }
+  
+  .edituserBtnContainer{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center
+  }
+  
+  .edituserBtnContainer>button{
+    margin: 0.2rem;
+  }

@@ -1,0 +1,10 @@
+.deleteuserBtnContainer{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center
+  }
+  
+  .deleteuserBtnContainer>button{
+    margin: 0.2rem;
+  }

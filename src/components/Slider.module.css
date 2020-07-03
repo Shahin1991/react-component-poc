@@ -1,0 +1,136 @@
+.rtl {
+  direction: rtl;
+}
+.ltr {
+  direction: ltr;
+}
+
+.slider {
+  position: relative;
+  overflow: hidden;
+  height: 100vh;
+  width: 100vw;
+}
+
+.slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 0.4s ease-in-out;
+}
+
+.slide.current {
+  opacity: 1;
+}
+
+.slide .content {
+  position: absolute;
+  bottom: 70px;
+  opacity: 0;
+  max-width: 600px;
+  background-color: rgba(255, 255, 255, 0.8);
+  color: #333;
+  padding: 35px;
+}
+
+.slide .content.ltr {
+  left: -600px;
+}
+.slide .content.rtl {
+  right: -600px;
+}
+
+.slide .content h1 {
+  margin-bottom: 10px;
+}
+
+.slide.current .content {
+  opacity: 1;
+  transition: all 0.7s ease-in-out 0.3s;
+}
+
+.slide.current .content.ltr {
+  transform: translateX(600px);
+}
+.slide.current .content.rtl {
+  transform: translateX(-600px);
+}
+
+.buttons button#next {
+  position: absolute;
+  top: 40%;
+  right: 15px;
+}
+
+.buttons button#prev {
+  position: absolute;
+  top: 40%;
+  left: 15px;
+}
+
+.buttons button {
+  border: 2px solid #fff;
+  background-color: transparent;
+  color: #fff;
+  cursor: pointer;
+  padding: 13px 15px;
+  border-radius: 50%;
+  outline: none;
+}
+
+.buttons button:hover {
+  background-color: #fff;
+  color: #333;
+}
+
+.buttons button:hover .arrow {
+  border: solid black;
+  border-width: 0 3px 3px 0;
+}
+
+.arrow {
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  display: inline-block;
+  padding: 0.3rem;
+}
+
+.arrow:hover {
+  border: solid black;
+  border-width: 0 3px 3px 0;
+}
+
+.right {
+  transform: rotate(-45deg) translate(-2px);
+  -webkit-transform: rotate(-45deg) translate(-2px);
+}
+
+.left {
+  transform: rotate(135deg) translateY(-2px);
+  -webkit-transform: rotate(135deg) translateY(-2px);
+}
+
+@media (max-width: 600px) and (orientation: portrait) {
+  .slide .content.ltr {
+    left: 0;
+    width: 100%;
+    bottom: -300px;
+    padding: 25px 15px;
+  }
+  .slide .content.rtl {
+    right: 0;
+    width: 100%;
+    bottom: -300px;
+    padding: 25px 15px;
+  }
+
+  .slide.current .content.ltr {
+    transform: translateY(-300px);
+  }
+  .slide.current .content.rtl {
+    transform: translateY(-300px);
+  }
+}
