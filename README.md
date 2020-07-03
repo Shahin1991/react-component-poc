@@ -48,9 +48,10 @@ GridView
 Contains sorting, searching
 Editing,Adding, Deleting
 Uses JSON placeholder user data
+Folder structure inspired by Codevolution youtube @gopinav
 
 Slider
 
-Based on idea from Brad Traversy
+Based on idea from Brad Traversy (@bradtraversy)
 
 
